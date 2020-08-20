@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import xyz.jfuruya.hideout.client.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
