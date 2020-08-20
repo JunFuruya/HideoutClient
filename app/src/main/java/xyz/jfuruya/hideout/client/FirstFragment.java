@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package xyz.jfuruya.hideout.client;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
