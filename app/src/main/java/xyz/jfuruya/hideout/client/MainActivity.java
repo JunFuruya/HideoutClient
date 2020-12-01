@@ -4,18 +4,19 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
 
-import xyz.jfuruya.hideout.client.R;
-
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MAIN_ACTIVITY:";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+        if (token == null) {
+            Log.d(TAG, "token is null.");
+        } else {
+            Log.d(TAG, token);
+        }
     }
 
     @Override
